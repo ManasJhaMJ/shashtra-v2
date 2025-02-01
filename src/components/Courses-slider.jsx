@@ -18,7 +18,11 @@ function Coursesslider() {
                     pauseOnFocus: false,
                     rewind: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     speed: 0.4,
+=======
+                    speed: 1,
+>>>>>>> f1f7675c1b58c8d0ba87fa40df89c3d53a1b6ff1
 =======
                     speed: 1,
 >>>>>>> f1f7675c1b58c8d0ba87fa40df89c3d53a1b6ff1
