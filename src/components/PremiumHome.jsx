@@ -7,7 +7,7 @@ function PremiumHome() {
                 <h1>Premium Membership for Premium Customers</h1>
                 <p>
                     Discover the membership that suits your learning needs,
-                    flexible cancellation
+                    flexible cancellation.
                 </p>
                 <h2>₹899.00/mo.</h2>
                 <button>Get Started</button>
