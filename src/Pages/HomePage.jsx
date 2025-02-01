@@ -1,6 +1,6 @@
 import Landing from '../components/Landing'
 import Coursesslider from '../components/Courses-slider'
-import PremiumHome from '../components/premiumHome'
+import PremiumHome from '../components/PremiumHome'
 import Subscribe from '../components/Subscribe'
 import Community from '../components/Community'
 
