@@ -601,6 +601,7 @@ nav .desktop {
   color: white;
   padding: 2rem;
   border-radius: 20px;
+  width: 650px;
   max-width: 80vw;
   margin: 2rem auto;
 }
@@ -637,4 +638,66 @@ nav .desktop {
 
 .community-button:hover {
   background-color: #f2f2f2;
+}
+
+.footer {
+  color: #333;
+  padding: 20px 0;
+  margin-top: 4rem;
+}
+
+.footer-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 2rem;
+}
+
+.footer-group div {
+  width: 50%;
+}
+
+.footer-group .footer-logo img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.footer-group .footer-links {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.footer-group .footer-links a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-group .footer-links a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.footer-group .social-media {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-group {
+    gap: 0.7rem;
+    padding: 10px;
+  }
+
+  .footer-group .footer-text {
+    font-size: 0.8rem;
+  }
+
+  .footer-group .footer-links {
+    font-size: 0.9rem;
+    width: 100%;
+  }
 }
