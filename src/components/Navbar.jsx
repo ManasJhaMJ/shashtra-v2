@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png';
 import logofont from '../assets/shashtra-font-nobg.png';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
     const [nav, setNav] = useState(false);
@@ -14,10 +15,18 @@ function Navbar() {
             {/* Desktop Navigation */}
             <div className="desktop">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Courses</li>
-                    <li>Contact Us</li>
+                    <li>
+                        <NavLink to='/'>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/about'>About Us</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/courses'>Courses</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/contact'>Contact Us</NavLink>
+                    </li>
                 </ul>
             </div>
             <div className="desktop">
@@ -33,11 +42,19 @@ function Navbar() {
                 </button>
                 <div className={nav ? 'nav-links active' : 'nav-links'}>
                     <ul>
-                        <li onClick={() => setNav(false)}>Home</li>
-                        <li onClick={() => setNav(false)}>About Us</li>
-                        <li onClick={() => setNav(false)}>Courses</li>
-                        <li onClick={() => setNav(false)}>Contact Us</li>
-                        <button className="google-button"></button>
+                        <li>
+                            <NavLink to='/' onClick={() => setNav(false)}>Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/about' onClick={() => setNav(false)}>About Us</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/courses' onClick={() => setNav(false)}>Courses</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/contact' onClick={() => setNav(false)}>Contact Us</NavLink>
+                        </li>
+                        <NavLink to='/'><button className="google-button"></button></NavLink>
                     </ul>
                 </div>
             </div>

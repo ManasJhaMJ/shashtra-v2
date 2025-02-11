@@ -40,6 +40,18 @@ nav div ul {
   gap: 30px;
 }
 
+nav div ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav div ul li a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
 .logo {
   border-radius: 50%;
   width: 45px;
@@ -698,6 +710,225 @@ nav .desktop {
 
   .footer-group .footer-links {
     font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
+#courses {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#courses h1 {
+  font-size: 4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.course-card {
+  width: 300px;
+  color: #464646;
+  background-size: 120% 120%;
+  animation: gradient-animation 2s ease infinite;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #5a2d00b7;
+  text-align: center;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+}
+
+.course-image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.course-title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.course-button {
+  background: #5a2d00;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70%;
+  transition: background 0.3s ease;
+}
+
+.course-button:hover {
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .course-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.course-details-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.course-details-container .course-title {
+  font-size: 3rem;
+  margin: 20px 5px;
+}
+
+.course-video {
+  width: 80%;
+  height: 500px;
+  border-radius: 10px;
+  margin-bottom: 5rem;
+}
+
+.course-title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.course-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.course-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.course-features li {
+  font-size: 16px;
+  background: #5a2d00;
+  color: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  gap: 3rem;
+}
+
+.pricing-card {
+  width: 90%;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.pricing-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.pricing-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pricing-card li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.basic {
+  background-color: #faa499;
+  background-image: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
+  color: #333;
+}
+
+.premium {
+  background-color: #ca7968;
+  background-image: linear-gradient(315deg, #ca7968 0%, #0c0c0c 74%);
+
+  color: white;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+}
+
+.pricing-card button {
+  background: #5a2d00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .course-video {
+    width: 100%;
+    height: 300px;
+  }
+
+  .course-details-container .course-title {
+    font-size: 2rem;
+  }
+
+  .course-description {
+    font-size: 1rem;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 90%;
+  }
+
+  .pricing-card button {
+    width: 100%;
+  }
+
+  .course-features {
+    width: 90%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .course-features li {
+    padding: 10px;
     width: 100%;
   }
 }
