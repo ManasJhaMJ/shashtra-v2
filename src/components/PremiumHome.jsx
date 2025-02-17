@@ -9,7 +9,7 @@ function PremiumHome() {
                     Discover the membership that suits your learning needs,
                     flexible cancellation.
                 </p>
-                <h2>₹899.00/mo.</h2>
+                {/* <h2>₹899.00/mo.</h2> */}
                 <button>Get Started</button>
             </div>
             <div className='premium-crate-img'>

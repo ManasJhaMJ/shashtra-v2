@@ -13,7 +13,7 @@ const Card = ({ image, heading, author, price, badge }) => {
             <div className="ccard-content">
                 <h3 className="card-heading">{heading}</h3>
                 <p className="card-author">{author}</p>
-                <p className="card-price">₹{price}</p>
+                {/* <p className="card-price">₹{price}</p> */}
                 {badge && <span className="card-badge">{badge}</span>}
             </div>
         </div>
