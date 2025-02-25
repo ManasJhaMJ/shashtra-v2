@@ -1,4 +1,5 @@
 import crate from '../assets/premium-nobg.png'
+import { Link } from 'react-router-dom'
 
 function PremiumHome() {
     return (
@@ -10,7 +11,9 @@ function PremiumHome() {
                     flexible cancellation.
                 </p>
                 {/* <h2>₹899.00/mo.</h2> */}
-                <button>Get Started</button>
+                <button>
+            <Link to="/courses">Get Started</Link>
+          </button>
             </div>
             <div className='premium-crate-img'>
                 <img src={crate} alt="premium crate" />

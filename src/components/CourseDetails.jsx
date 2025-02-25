@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { MdWorkspacePremium } from "react-icons/md";
 import { LuPyramid } from "react-icons/lu";
+import bhagvadGeeta from '../assets/bhagvadGeeta.jpg';
 
 const courseData = {
   1: {
@@ -58,12 +59,13 @@ const CourseDetails = () => {
 
   return (
     <div className="course-details-container">
-      <iframe
+      {/* <iframe
         className="course-video"
         src={course.trailer}
         title={course.title}
         allowFullScreen
-      ></iframe>
+      ></iframe> */}
+      <img src={bhagvadGeeta} alt="" />
       <h1 className="course-title">{course.title}</h1>
       <p className="course-description">{course.description}</p>
       <h2>What You'll Learn</h2>

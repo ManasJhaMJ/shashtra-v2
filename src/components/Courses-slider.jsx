@@ -27,7 +27,7 @@ function Coursesslider() {
                     <Card
                         image="https://i.pinimg.com/736x/42/18/e9/4218e916944cfe9c18132d6f15e38cbf.jpg"
                         heading="Shrimad Bhagavad Gita (श्रीमद्भगवद्गीता)"
-                        author="Prof. Samuel Thompson"
+                        // author="Prof. Samuel Thompson"
                         // price="699"
                         badge="Bestseller"
                     />
@@ -36,7 +36,7 @@ function Coursesslider() {
                     <Card
                         image={comingsoon}
                         heading="Coming Soon"
-                        author="To Be Revealed"
+                        // author="To Be Revealed"
                         // price="699"
                         badge="Upcoming"
                     />
@@ -45,7 +45,7 @@ function Coursesslider() {
                     <Card
                         image={comingsoon}
                         heading="Coming Soon"
-                        author="To Be Revealed"
+                        // author="To Be Revealed"
                         // price="699"
                         badge="Upcoming"
                     />
@@ -54,7 +54,7 @@ function Coursesslider() {
                     <Card
                         image={comingsoon}
                         heading="Coming Soon"
-                        author="To Be Revealed"
+                        // author="To Be Revealed"
                         // price="699"
                         badge="Upcoming"
                     />
@@ -63,7 +63,7 @@ function Coursesslider() {
                     <Card
                         image={comingsoon}
                         heading="Coming Soon"
-                        author="To Be Revealed"
+                        // author="To Be Revealed"
                         // price="699"
                         badge="Upcoming"
                     />
@@ -72,7 +72,7 @@ function Coursesslider() {
                     <Card
                         image={comingsoon}
                         heading="Coming Soon"
-                        author="To Be Revealed"
+                        // author="To Be Revealed"
                         // price="699"
                         badge="Upcoming"
                     />
