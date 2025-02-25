@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Community = () => {
     const [images, setImages] = useState([]);
@@ -26,7 +27,9 @@ const Community = () => {
                     Begin the journey of your dream career today by joining our expansive
                     community of students and mentors
                 </p>
-                <button className="community-button">View upcoming courses</button>
+                <button className="community-button">
+                    <Link to="/courses">Join Now</Link>
+                </button>
             </div>
         </div>
     );

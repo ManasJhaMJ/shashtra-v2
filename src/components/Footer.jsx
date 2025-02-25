@@ -1,42 +1,46 @@
-import React from 'react'
-import logoName from '../assets/shashtra-font-nobg.png'
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import React from "react";
+import logoName from "../assets/shashtra-font-nobg.png";
+import { FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function Footer() {
-    return (
-        <div className='footer'>
-            <div className='footer-group'>
-                <div className='footer-logo'>
-                    <img src={logoName} alt="" />
-                </div>
-                <div className='social-media'>
-                    <a href='https://www.twitter.com/shashtra/' target='_blank' rel='noreferrer'>
-                        <FaTwitter fill='#5c2e00' size={23} />
-                    </a>
-                    <a href='https://www.instagram.com/shashtra/' target='_blank' rel='noreferrer'>
-                        <FaInstagram fill='#5c2e00' size={23} />
-                    </a>
-                    <a href='https://www.facebook.com/shashtra/' target='_blank' rel='noreferrer'>
-                        <FaFacebook fill='#5c2e00' size={23} />
-                    </a>
-                </div>
-            </div>
-
-            <hr />
-
-            <div className='footer-group'>
-                <div className='footer-text'>
-                    @2025 Shashtra | All Rights Reserved
-                </div>
-                <div className='footer-links'>
-                    <Link to='/about'>About Us</Link>
-                    <Link to='/courses'>Courses</Link>
-                    <Link to='/contact'>Contact Us</Link>
-                </div>
-            </div>
+  return (
+    <div className="footer">
+      <div className="footer-group">
+        <div className="footer-logo">
+          <img src={logoName} alt="Shashtra Logo" />
         </div>
-    )
+        <div className="social-media">
+          <a
+            href="https://youtube.com/@shashtraeducation?si=cVi2t0wNdn6RhfGh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaYoutube fill="#6D3E0F" size={25} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shashtra-education-5a49772a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin fill="#6D3E0F" size={25} />
+          </a>
+          <a
+            href="https://www.instagram.com/shashtraeducation?igsh=MTIxM21zcnBkZHg0eg=="
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaInstagram fill="#6D3E0F" size={25} />
+          </a>
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="footer-group">
+        <div className="footer-text">© 2025 Shashtra | All Rights Reserved</div>
+      </div>
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;
