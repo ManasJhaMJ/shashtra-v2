@@ -2,15 +2,15 @@ import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import Courses from "./pages/Courses";
-import ContactUs from "./pages/ContactUs";
-import AboutUs from "./pages/AboutUs";
-import Signup from "./pages/Signup";
-import Signin from "./pages/Signin";
-import OtpSection from "./pages/OtpSection";
+import HomePage from "./Pages/HomePage";
+import Courses from "./Pages/Courses";
+import ContactUs from "./Pages/ContactUs";
+import AboutUs from "./Pages/AboutUs";
+import Signup from "./Pages/Signup";
+import Signin from "./Pages/Signin";
+import OtpSection from "./Pages/OtpSection";
 import CourseDetails from "./components/CourseDetails";
-import PaymentGateway from "./pages/PaymentGateway";
+import PaymentGateway from "./Pages/PaymentGateway";
 import { useState } from "react";
 
 const App = () => {
