@@ -8,9 +8,9 @@ import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
-import OtpSection from "./Pages/OtpSection";
+import OtpSection from "./pages/OtpSection";
 import CourseDetails from "./components/CourseDetails";
-import PaymentGateway from "./Pages/PaymentGateway";
+import PaymentGateway from "./pages/PaymentGateway";
 import { useState } from "react";
 
 const App = () => {
