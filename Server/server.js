@@ -5,9 +5,15 @@ const cors = require("cors");
 
 dotenv.config();
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000; // Use Render's port
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://shashtra.in/", // Change to your frontend URL
+    methods: "POST",
+    allowedHeaders: "Content-Type",
+  })
+);
 app.use(express.json());
 
 // Razorpay instance
@@ -20,7 +26,7 @@ const razorpay = new Razorpay({
 app.post("/api/payment", async (req, res) => {
   try {
     const options = {
-      amount: 100, // 1 INR (Razorpay expects paise)
+      amount: 100, // Amount in paise (1 INR)
       currency: "INR",
       receipt: `receipt_${Date.now()}`,
     };
@@ -28,10 +34,11 @@ app.post("/api/payment", async (req, res) => {
     const order = await razorpay.orders.create(options);
     res.json(order);
   } catch (error) {
+    console.error(error);
     res.status(500).send("Error creating payment");
   }
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
