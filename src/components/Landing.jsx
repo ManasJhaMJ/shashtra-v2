@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import LearnMoreModal1 from "./LearnMoreModal1";
 import LearnMoreModal2 from "./LearnMoreModal2";
 import LearnMoreModal3 from "./LearnMoreModal3";
@@ -7,9 +8,11 @@ import landing from "../assets/landing.jpg";
 import why1 from "../assets/11.png";
 import why2 from "../assets/33.png";
 import why3 from "../assets/landing2.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Landing() {
+  const navigate=useNavigate();
+
   const [activeModal, setActiveModal] = useState(null);
 
   const openModal = (modalNumber) => {
@@ -19,6 +22,11 @@ function Landing() {
   const closeModal = () => {
     setActiveModal(null);
   };
+
+  const handleLogin=()=>{
+ 
+    navigate("/signup");
+  }
 
   return (
     <>
@@ -30,9 +38,7 @@ function Landing() {
             academic, moral, and spiritual growth. Embark on a journey of
             wisdom, self-discovery, and transformation with Shashtra.
           </p>
-          <button>
-            <Link to="/courses">Get Started</Link>
-          </button>
+          <button onClick={handleLogin}>Get Started</button>
         </div>
         <div className="landing-image">
           <img src={landing} alt="" />

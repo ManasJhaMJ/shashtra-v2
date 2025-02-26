@@ -1,0 +1,134 @@
+/* OTP Container */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6f9fc, #d9e2ec);
+    margin-top: 10px;
+  }
+  
+  /* OTP Card */
+  .otp-card {
+    width: 400px;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* OTP Image */
+  .otp-image img {
+    width: 250px;
+    height: 300px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* OTP Title */
+  .otp-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* OTP Subtitle */
+  .otp-subtitle {
+    font-size: 1rem;
+    color: #576574;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* OTP Form */
+  .otp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* OTP Input Container */
+  .otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* OTP Input Fields */
+  .otp-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #3498db;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .otp-input:focus {
+    border-color: #2c3e50;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* OTP Submit Button */
+  .otp-submit {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #3498db;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .otp-submit:hover {
+    background: #2980b9;
+  }
+  
+  /* OTP Resend Link */
+  .otp-resend {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .otp-resend a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .otp-resend a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .otp-card {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  
+    .otp-input {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }
+  

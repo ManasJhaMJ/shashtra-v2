@@ -1,0 +1,330 @@
+/* Signup Container */
+.signup-container {
+  background: white;
+  padding: 40px;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  border-radius: 50px;
+  max-width: 420px;
+  width: 85%;
+  animation: fadeIn var(--transition-speed) ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.signup-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+/* Input Fields with Floating Labels */
+.input-group {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.signup-container label {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  transition: 0.3s ease;
+  color: var(--secondary-color);
+  pointer-events: none;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+  width: 100%;
+  height: 55px;
+  padding: 14px;
+  border: none;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  outline: none;
+  background: var(--input-bg);
+  transition: box-shadow var(--transition-speed), border-color var(--transition-speed);
+  margin-bottom: 20px;
+}
+
+.signup-container input:focus + label,
+.signup-container input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.signup-container input:focus {
+  box-shadow: 0 0 8px var(--input-focus-border);
+  border: 1px solid var(--primary-color);
+}
+
+.continue-with{
+  color: #6D3E0F;
+  font-weight: bold;
+}
+/* Phone Input Styling */
+/* Phone Input Container */
+.phone-input {
+  margin-top: -5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--border-radius);
+  background: var(--input-bg);
+  box-shadow: 0 2px 6px var(--shadow-color);
+  transition: box-shadow var(--transition-speed);
+  margin-bottom: 20px;
+  height: 35px;
+}
+
+.Google{
+  color: black;
+}
+/* Flag Section */
+.flag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* Flag Image */
+.flag img {
+  width: 24px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+/* Phone Input Field */
+/* Phone Input Container */
+.phone-input {
+  margin-top: 10px;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  gap: 8px; /* Space between flag and input */
+  padding: 12px 16px;
+  border: 1px solid #8B5D33; /* Match your border color */
+  border-radius: 12px;
+  background: #F3F6F9; /* Light background for input */
+  box-shadow: 0 2px 6px rgba(139, 93, 51, 0.5);
+}
+
+/* Flag Section */
+.flag {
+  display: flex;
+  align-items: center; /* Aligns flag image and text */
+  gap: 6px; /* Space between flag image and text */
+  font-weight: 600;
+  color: #4B3621; /* Adjust text color */
+}
+
+/* Flag Image */
+.flag img {
+  width: 24px; /* Fixed size for consistency */
+  height: 18px;
+  border-radius: 6px;
+}
+
+/* Input Field */
+.input-field.phone {
+  flex: 1; /* Occupy remaining space */
+  border: none;
+  outline: none; /* Removes the blue outline on focus */
+  background: transparent;
+  font-size: 16px;
+  color: #4B3621; /* Match your input text color */
+  transform: translateY(10px);
+}
+
+/* Placeholder Styling */
+.input-field.phone::placeholder {
+  color: #888;
+}
+
+/* Focus Effect */
+.phone-input:focus-within {
+  box-shadow: 0 0 8px rgba(139, 93, 51, 0.8);
+}
+
+/* Responsive Adjustment */
+@media (max-width: 480px) {
+  .phone-input {
+    padding: 8px 12px;
+  }
+
+  .flag img {
+    width: 20px;
+    height: 15px;
+  }
+
+  .input-field.phone {
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* Button Styling */
+.signup-container button {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.signup-container button:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.signup-container button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Social Login Buttons */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+
+.social-icon {
+  font-size: 28px;
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: transform var(--transition-speed);
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+.social-icon:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Link Styling */
+.signup-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+.signup-link a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+/* Social Login Container */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* Social Icon Box */
+.social-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background: rgb(229, 227, 227);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 10px var(--shadow-color);
+  transition: transform var(--transition-speed);
+}
+
+/* Black Circle inside the Box */
+.social-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: black;
+  border-radius: 50%;
+}
+
+
+/* Social Icon Styling */
+.social-icon {
+  color: white;
+  font-size: 20px;
+}
+.social-Google {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.social-box:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .signup-container {
+      padding: 24px;
+  }
+
+  .signup-container h2 {
+      font-size: 24px;
+  }
+
+  .signup-container button {
+      font-size: 16px;
+  }
+
+  .social-icon {
+      font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+      max-width: 90%;
+  }
+}
+
+/* Accessibility Improvements */
+.signup-container input:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.signup-container button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
