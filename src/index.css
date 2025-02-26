@@ -46,8 +46,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
-  width: calc(100vw - 60px);
+  padding: 20px 0;
+  width: 100%;
 }
 
 nav div,
@@ -75,9 +75,27 @@ nav div ul li a:hover {
   text-decoration: underline;
 }
 
+.navbar {
+  background-color: #fff;
+  position:absolute; /* Initially static */
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 4px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
 .logo {
   border-radius: 50%;
   width: 45px;
+  margin-left: 1rem;
 }
 
 .logo-name {
@@ -92,8 +110,33 @@ nav .google-button {
   height: 34px;
   border: none;
   cursor: pointer;
+  position: relative;
   border-radius: 5px;
   background-color: #fff;
+  margin-right: 0.5rem;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+/* Show tooltip on hover */
+.google-button:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Desktop and Mobile Styles */
@@ -106,6 +149,7 @@ nav .desktop {
 }
 
 #landing {
+  margin-top: 5rem;
   min-height: 80vh;
   display: flex;
   justify-content: center;
@@ -230,6 +274,11 @@ nav .desktop {
 
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
+  #landing {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .cards-container {
     flex-direction: column;
     align-items: center;
@@ -237,6 +286,19 @@ nav .desktop {
 
   .card {
     max-width: 90%;
+  }
+
+  nav div ul {
+    gap: 15px;
+    padding: 0;
+  }
+
+  nav div ul li {
+    font-size: 0.9rem;
+  }
+
+  nav .google-button {
+    margin-right: 0.3rem;
   }
 }
 
@@ -353,6 +415,10 @@ nav .desktop {
   #landing button {
     font-size: 1rem;
     margin-top: 0.5rem;
+  }
+
+  nav .google-button {
+    margin-right: 0;
   }
 }
 
@@ -738,6 +804,7 @@ nav .desktop {
 }
 
 #courses {
+  margin-top: 4rem;
   padding: 40px 20px;
   text-align: center;
 }
@@ -1071,5 +1138,255 @@ nav .desktop {
   .modal-content button {
     font-size: 0.85rem;
     padding: 8px 14px;
+  }
+}
+
+/* General Styling */
+.about-us {
+  margin-top: 4rem;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #5c2e00;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-container h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.about-message {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+/* Our Message Section */
+.about-message p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.mission,
+.vision {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #5c2e00;
+}
+
+/* Core Values */
+.core-values {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.core-values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.core-values li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Closing Statement */
+.closing-statement {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5c2e00;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission,
+  .vision,
+  .core-values li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-us h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-message p {
+    font-size: 0.95rem;
+  }
+}
+
+/* General Styling */
+.contact-us {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #5c2e00;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Contact Details */
+.contact-details {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-item a {
+  color: #5c2e00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Icons */
+.icon {
+  font-size: 1.5rem;
+  color: #5c2e00;
+}
+
+/* Social Links */
+.social-links {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.social-links h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #444;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.05);
+}
+
+.contact-social-icon {
+  font-size: 1.5rem;
+}
+
+.youtube {
+  color: #FF0000;
+}
+
+.linkedin {
+  color: #0077B5;
+}
+
+.instagram {
+  color: #C13584;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    justify-content: center;
+    width: 80%;
+    margin: auto;
   }
 }
